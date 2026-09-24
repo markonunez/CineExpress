@@ -1,0 +1,8 @@
+public class Pelicula
+{
+    public int Id { get; set; }
+    public string Titulo { get; set; } = string.Empty;
+    public string Genero { get; set; } = string.Empty;
+    public int Duracion { get; set; }
+    public int CopiasDisponibles { get; set; }
+}
