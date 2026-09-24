@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineExpress - Catálogo de Películas</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+
+    <header>
+      <h1>🎬 CineExpress</h1>
+      <p>Tu videoclub de siempre, con <strong>las mejores películas en DVD</strong>.</p>
+      <nav>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#agregar">Agregar película</a>
+        <a href="#nosotros">Nosotros</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="contenido">
+        <section id="catalogo">
+          <h2>Películas disponibles</h2>
+          <p>Marcá las que querés ver y pasá a buscarlas por el local.</p>
+
+          <label for="input-busqueda">Buscar por título:</label>
+          <input type="search" id="input-busqueda" placeholder="Escribí un título..." />
+
+          <div id="estado-carga">Cargando películas...</div>
+          <div class="grid-peliculas" id="grid-peliculas">
+            <!-- Las tarjetas se generan dinámicamente con JavaScript -->
+          </div>
+        </section>
+
+        <section id="agregar">
+          <h2>Agregar película</h2>
+          <form id="form-pelicula">
+            <label for="input-titulo">Título:</label>
+            <input type="text" id="input-titulo" required minlength="2" />
+
+            <label for="input-duracion">Duración (minutos):</label>
+            <input type="number" id="input-duracion" min="1" required />
+
+            <label for="input-copias">Copias disponibles:</label>
+            <input type="number" id="input-copias" min="0" required />
+
+            <label for="input-genero">Género:</label>
+            <select id="input-genero">
+              <option value="Acción">Acción</option>
+              <option value="Comedia">Comedia</option>
+              <option value="Terror">Terror</option>
+              <option value="Drama">Drama</option>
+              <option value="Ciencia Ficción">Ciencia Ficción</option>
+            </select>
+
+            <button type="submit">Agregar al catálogo</button>
+          </form>
+        </section>
+
+        <section id="nosotros">
+          <h2>Sobre nosotros</h2>
+          <p>CineExpress es un videoclub que todavía cree en la magia de alquilar una película en DVD.</p>
+        </section>
+      </div>
+
+      <aside>
+        <h3>Géneros</h3>
+        <ul id="lista-generos">
+          <li><button class="btn-genero activo" data-genero="Todos">Todos</button></li>
+          <li><button class="btn-genero" data-genero="Acción">Acción</button></li>
+          <li><button class="btn-genero" data-genero="Comedia">Comedia</button></li>
+          <li><button class="btn-genero" data-genero="Terror">Terror</button></li>
+          <li><button class="btn-genero" data-genero="Drama">Drama</button></li>
+          <li><button class="btn-genero" data-genero="Ciencia Ficción">Ciencia Ficción</button></li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 CineExpress</p>
+      <p>Contacto: <a href="mailto:info@cineexpress.com">info@cineexpress.com</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
