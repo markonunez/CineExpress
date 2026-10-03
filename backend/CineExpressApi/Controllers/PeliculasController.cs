@@ -7,10 +7,10 @@ public class PeliculasController : ControllerBase
     private static List<Pelicula> _peliculas = new()
     {
 
-        new Pelicula { Id = 1,Titulo = "Volver al futuro",Genero = "Ciencia Ficcion", Duracion = 230, CopiasDisponibles = 7 },
-        new Pelicula { Id = 2, Titulo = "iron man",    Genero = "Acción",          Duracion = 80, CopiasDisponibles = 1 },
+        new Pelicula { Id = 1,Titulo = "Volver al futuro",Genero = "Ciencia Ficción", Duracion = 120, CopiasDisponibles = 7 },
+        new Pelicula { Id = 2, Titulo = "Iron man",    Genero = "Acción",          Duracion = 130, CopiasDisponibles = 1 },
         new Pelicula { Id = 3, Titulo = "Son como niños",      Genero = "Comedia",         Duracion = 150,  CopiasDisponibles = 3 },
-        new Pelicula { Id = 4, Titulo = "Chuky",    Genero = "Terror",          Duracion = 200, CopiasDisponibles = 5 },
+        new Pelicula { Id = 4, Titulo = "Chucky",    Genero = "Terror",          Duracion = 180, CopiasDisponibles = 5 },
         new Pelicula { Id = 5, Titulo = "Forrest Gump",     Genero = "Drama",           Duracion = 150, CopiasDisponibles = 2 },
     };
     [HttpGet]
